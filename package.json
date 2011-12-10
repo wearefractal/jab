@@ -1,0 +1,30 @@
+{
+   "name":"jab",
+   "description":"xmpp client",
+   "version":"0.0.1",
+   "homepage":"http://github.com/wearefractal/jab",
+   "repository":"git://github.com/wearefractal/jab",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+    "main":"./jab.coffee",
+
+   "engines":{
+      "node":">= 0.4.0"
+   },
+
+   "dependencies":{
+      "protege":"*",
+      "coffee-script":"*"
+   },
+    
+   "devDependencies":{
+      "should":"*"
+   },
+
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/wearefractal/jab/raw/master/LICENSE"
+      }
+   ]
+}
+
