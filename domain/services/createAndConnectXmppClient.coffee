@@ -1,8 +1,7 @@
 _ = require 'slice'
 xmpp = _.load 'node-xmpp'
 
-
-connectXmppClient = (connection) ->
+createAndConnectXmppClient = (connection) ->
 
   # connects on creation
 
@@ -13,5 +12,4 @@ connectXmppClient = (connection) ->
     port: connection.port
 
 
-module.exports = connectXmppClient
-
+module.exports = createAndConnectXmppClient
