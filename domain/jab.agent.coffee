@@ -1,28 +1,21 @@
 _ = require 'slice'
 EventEmitter = _.load('events').EventEmitter
 createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
-createStatusMessage = _.load 'services.createStatusMessage'
+createMessage = _.load 'services.createMessage'
 
 class JabAgent extends EventEmitter
 
   constructor: (@connection) ->
-    # connection: {@host, @port, @jabberId, @jabberPass, @verbose, @status}
-    if !@connection? 
-      throw new Error "jab: connection details not defined"
+    throw new Error "jab: connection details not defined" unless @connection?
  
   connect: ->
-
     @xmppClient = createAndConnectXmppClient @connection
 
     # online
     @xmppClient.on 'online', =>
- 
       @connected = true
       @emit 'connected'
-      if @connection.status?
-        @setStatus @xmppClient, @connection.status
-
-      # stanza 
+      # stanza handler
       @xmppClient.on 'stanza', (stanza) => @emit 'stanza', stanza
 
     # offline
@@ -34,8 +27,7 @@ class JabAgent extends EventEmitter
     @xmppClient.on 'authFail', (err) => @emit 'error', err
     @xmppClient.on 'error', (err) => @emit 'error', err
 
-  setStatus: (status) -> @xmppClient.send createStatusMessage status
-  send: (message) -> @xmppClient.send message
+  send: (message) -> @xmppClient.send createMessage message
   disconnect: -> @xmppClient.end()  
 
 
