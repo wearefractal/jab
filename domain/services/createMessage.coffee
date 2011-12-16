@@ -1,4 +1,4 @@
-_ = require 'slice'
+_ = require('slice') __dirname
 xmpp = _.load 'node-xmpp'
 xmlson = _.load 'xmlson'
 

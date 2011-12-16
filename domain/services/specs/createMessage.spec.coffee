@@ -1,12 +1,9 @@
 #>> Setup
 
-_ = require 'slice'
+_ = require('slice') __dirname
 should = _.load 'should'
 createMessage = _.load 'services.createMessage'
 
-console.log createMessage
-
-###
 #>> Given an object
 
 obj = {"animals":{"@type":"pets","@test":"yeah","dog":[{"@type":"dumb","name":"Rufus","breed":"labrador"},{"name":"Marty","breed":"whippet"},null],"cat":{"@name":"Matilda"}}}

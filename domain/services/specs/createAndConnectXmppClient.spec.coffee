@@ -1,6 +1,6 @@
 #>> Setup
 
-_ = require 'slice'
+_ = require('slice') __dirname
 should = _.load 'should'
 createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
 

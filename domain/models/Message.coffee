@@ -1,4 +1,4 @@
-_ = require 'slice'
+_ = require('slice') __dirname
 config = _.load 'command.config'
 getRandomId = _.load 'xmpp.services.getRandomId'
 getElement = _.load 'xmpp.services.getElement'

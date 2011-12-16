@@ -1,6 +1,6 @@
 #>> Setup
 
-_ = require 'slice'
+_ = require('slice') __dirname
 should = _.load 'should'
 xmpp = _.load 'node-xmpp'
 createMessage = _.load 'services.parseMessage'

@@ -1,4 +1,4 @@
-_ = require 'slice'
+_ = require('slice') __dirname
 xmlson = _.load 'xmlson'
 
 parseMessage = (message) -> xmlson.toJSON message
