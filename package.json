@@ -14,10 +14,10 @@
    "dependencies":{
       "coffee-script":"*",
       "node-xmpp":"*",
+      "ltx":"*",
       "xmlson":"*",
       "slice":"*",
-      "modulate":"*",
-      "node-stringprep":"*"
+      "modulate":"*"
    },
     
    "devDependencies":{
