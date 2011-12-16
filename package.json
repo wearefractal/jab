@@ -16,7 +16,8 @@
       "node-xmpp":"*",
       "xmlson":"*",
       "slice":"*",
-      "modulate":"*"
+      "modulate":"*",
+      "node-stringprep":"*"
    },
     
    "devDependencies":{
