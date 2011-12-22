@@ -4,7 +4,7 @@ rzrEnvironments =
     sliceModules: ['modulate']
 
   'spex.unit':
-    sliceModules: ['spex-unit']
+    sliceModules: ['spex-util']
 
 
 module.exports = rzrEnvironments

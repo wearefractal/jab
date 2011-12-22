@@ -1,7 +1,7 @@
 #>> Setup
 
-_ = require('slice') __dirname
-should = _.load 'should'
+_ = require('slice') sandbox.__dirname
+
 createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
 
 #>> When I create an xmppClient
@@ -14,10 +14,14 @@ xmppClient =
     verbose: true
     status: "I'm online"
 
-#>> Then
+#>> Then When It connects
 
-xmppClient.on "online", -> 
-  xmppClient.should.be.ok
-  xmppClient.end()
+xmppClient.on 'online', -> 
 
+#>> it should be ok
 
+  xmppClient.should.be. ok
+
+#>> Cleanup
+  
+  xmppClient.end() 

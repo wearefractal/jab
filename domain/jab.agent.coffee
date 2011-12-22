@@ -1,5 +1,5 @@
 _ = require('slice') __dirname
-EventEmitter = _.load('events').EventEmitter
+EventEmitter = require('events').EventEmitter
 createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
 createMessage = _.load 'services.createMessage'
 

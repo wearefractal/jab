@@ -1,8 +1,8 @@
 #>> Setup
 
-_ = require('slice') __dirname
-should = _.load 'should'
-ltx = _.load 'ltx'
+path = require 'path'
+_ = require('slice') sandbox.__dirname
+
 parseMessage = _.load 'services.parseMessage'
 
 #>> Given an XML message

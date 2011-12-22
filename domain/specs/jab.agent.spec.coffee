@@ -1,14 +1,9 @@
 #>> Setup
 
-_ = require 'slice'
-should = _.load 'should'
-Jab = require '../jab.agent'
+path = require 'path'
+_ = require('slice') sandbox.__dirname
 
-#>> When I try to create a jab client with no connection
-
-try jabClient = new Jab() 
-catch error 
-  error.message.should.equal "jab: connection details not defined"
+Jab = require (path.resolve _.domainRoot, 'jab.agent')
 
 #>> When I create a valid connection
 
@@ -23,15 +18,20 @@ jabClient = new Jab
 
 jabClient.should.be.ok
 
-#>> When I try to connect it
+#>> When I to connect it
 
 jabClient.connect()
 
-#>> Then it should be ok when it connects
+#>> And it connects 
 
 jabClient.on "connected", -> 
 
+#>> Then it should be ok
+
   jabClient.should.be.ok
+
+#>> Cleanup
+
   jabClient.disconnect()
 
 
