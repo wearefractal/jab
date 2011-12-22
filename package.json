@@ -1,11 +1,11 @@
 {
    "name":"jab",
    "description":"xmpp client",
-   "version":"0.0.3",
+   "version":"0.0.4",
    "homepage":"http://github.com/wearefractal/jab",
    "repository":"git://github.com/wearefractal/jab",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-   "main":"./jab.coffee",
+   "main":"./jab.js",
 
    "engines":{
       "node":">= 0.4.0"
