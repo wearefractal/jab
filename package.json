@@ -15,7 +15,8 @@
       "coffee-script":"*",
       "node-xmpp":"*",
       "ltx":"*",
-      "xmlson":"*"
+      "xmlson":"*",
+      "node-stringprep":"*"
    },
     
    "devDependencies":{
