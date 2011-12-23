@@ -10,12 +10,14 @@ class JabAgent extends EventEmitter
  
   connect: ->
     @xmppClient = createAndConnectXmppClient @connection
-
+    
     # online
     @xmppClient.on 'online', =>
       @connected = true
       @emit 'connected'
-      @ping() if @connection.ping
+      
+      @ping() if @connection.ping?
+      @send presence:{}
       
       # stanza handler
       @xmppClient.on 'stanza', (stanza) => 
@@ -36,7 +38,6 @@ class JabAgent extends EventEmitter
     @xmppClient.send createMessage message
     
   disconnect: -> @xmppClient.end()  
-  
   # Send XMPP PING (XEP-0199)
   ping: ->
     @send iq: '@from': @xmppClient.jid.toString(), '@to': @xmppClient.jid.domain, '@type': 'get', ping: '@xmlns': 'urn:xmpp:ping'
