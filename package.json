@@ -1,7 +1,7 @@
 {
    "name":"jab",
    "description":"xmpp client",
-   "version":"0.0.4",
+   "version":"0.0.5",
    "homepage":"http://github.com/wearefractal/jab",
    "repository":"git://github.com/wearefractal/jab",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
