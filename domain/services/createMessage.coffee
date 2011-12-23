@@ -1,6 +1,5 @@
-_ = require('slice') __dirname
-xmpp = _.load 'node-xmpp'
-xmlson = _.load 'xmlson'
+xmpp = require 'node-xmpp'
+xmlson = require 'xmlson'
 
 createMessage = (message) ->
   return message if message instanceof xmpp.Element

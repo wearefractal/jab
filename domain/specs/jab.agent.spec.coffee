@@ -1,10 +1,9 @@
 #>> Setup
 
 path = require 'path'
-_ = require('slice') __dirname# sandbox.__dirname
-require 'should'
+should = require 'should'
 
-Jab = require (path.resolve _.domainRoot, 'jab.agent')
+Jab = require '../jab.agent'
 
 #>> When I create a valid connection
 

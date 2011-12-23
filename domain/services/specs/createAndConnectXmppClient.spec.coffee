@@ -1,8 +1,6 @@
 #>> Setup
 
-_ = require('slice') sandbox.__dirname
-
-createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
+createAndConnectXmppClient = require '../createAndConnectXmppClient'
 
 #>> When I create an xmppClient
 

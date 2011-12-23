@@ -1,7 +1,7 @@
-_ = require('slice') __dirname
-EventEmitter = require('events').EventEmitter
-createAndConnectXmppClient = _.load 'services.createAndConnectXmppClient'
-createMessage = _.load 'services.createMessage'
+{EventEmitter} = require 'events'
+createAndConnectXmppClient = require './services/createAndConnectXmppClient'
+createMessage = require './services/createMessage'
+parseMessage = require './services/parseMessage'
 
 class JabAgent extends EventEmitter
 
@@ -16,7 +16,7 @@ class JabAgent extends EventEmitter
       @connected = true
       @emit 'connected'
       # stanza handler
-      @xmppClient.on 'stanza', (stanza) => @emit 'stanza', stanza
+      @xmppClient.on 'stanza', (stanza) => @emit 'stanza', parseMessage stanza
 
     # offline
     @xmppClient.on 'offline', =>

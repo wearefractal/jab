@@ -1,5 +1,4 @@
-_ = require('slice') __dirname
-xmpp = _.load 'node-xmpp'
+xmpp = require 'node-xmpp'
 
 createAndConnectXmppClient = (connection) ->
 
