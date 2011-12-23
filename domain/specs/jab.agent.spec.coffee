@@ -1,7 +1,8 @@
 #>> Setup
 
 path = require 'path'
-_ = require('slice') sandbox.__dirname
+_ = require('slice') __dirname# sandbox.__dirname
+require 'should'
 
 Jab = require (path.resolve _.domainRoot, 'jab.agent')
 
