@@ -1,3 +1,5 @@
+(Deprecated, don't use)
+
 _jab_ is a simple xmpp client, currently just wrapping node-xmpp
 
 
